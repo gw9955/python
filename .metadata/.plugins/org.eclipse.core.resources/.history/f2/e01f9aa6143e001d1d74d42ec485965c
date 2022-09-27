@@ -1,0 +1,2 @@
+def getLotto():
+    return arr6

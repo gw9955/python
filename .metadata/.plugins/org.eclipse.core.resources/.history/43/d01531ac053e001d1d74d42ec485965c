@@ -1,0 +1,9 @@
+# 로또 생성하시오
+from random import random
+
+arr45 = [1,2,3,4,5]
+
+arr45[0]=arr45[1]
+arr45[1]=arr45[0]
+
+print(arr45)

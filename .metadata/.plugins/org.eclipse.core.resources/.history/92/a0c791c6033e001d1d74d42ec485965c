@@ -1,0 +1,7 @@
+# 로또 생성하시오
+from random import random
+
+a = random(list(range(1, 46)))
+
+for i in a:
+    print(i)

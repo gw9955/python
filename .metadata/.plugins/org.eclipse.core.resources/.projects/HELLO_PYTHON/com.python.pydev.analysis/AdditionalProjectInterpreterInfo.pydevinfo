@@ -1,0 +1,93 @@
+-- VERSION_5
+-- START DISKCACHE_3
+D:\workspace_python\.metadata\.plugins\org.eclipse.core.resources\.projects\HELLO_PYTHON\com.python.pydev.analysis\v2_indexcache
+day01.var01|1664239183246342200|D:\workspace_python\HELLO_PYTHON\day01\var01.py
+day01.if01|1664239183232379100|D:\workspace_python\HELLO_PYTHON\day01\if01.py
+day02.mytest01|1664240921268275100|D:\workspace_python\HELLO_PYTHON\day02\mytest01.py
+day02.myinput|1664239645772631800|D:\workspace_python\HELLO_PYTHON\day02\myinput.py
+day01.test01|1664239183242353700|D:\workspace_python\HELLO_PYTHON\day01\test01.py
+day01.for01|1664239183225368600|D:\workspace_python\HELLO_PYTHON\day01\for01.py
+day01.arr01|1664239183220382700|D:\workspace_python\HELLO_PYTHON\day01\arr01.py
+day01.for02|1664239183229387000|D:\workspace_python\HELLO_PYTHON\day01\for02.py
+day01.__init__|1664239183246342200|D:\workspace_python\HELLO_PYTHON\day01|^
+day02.mydef02|1664249195166236500|D:\workspace_python\HELLO_PYTHON\day02\mydef02.py
+day02.mydef01|1664247981509588900|D:\workspace_python\HELLO_PYTHON\day02\mydef01.py
+day02.mydef04|1664249892250175700|D:\workspace_python\HELLO_PYTHON\day02\mydef04.py
+day02.mydef03|1664249205154749500|D:\workspace_python\HELLO_PYTHON\day02\mydef03.py
+day02.mydef05|1664250612017498400|D:\workspace_python\HELLO_PYTHON\day02\mydef05.py
+day02.__init__|1664250260525209100|D:\workspace_python\HELLO_PYTHON\day02|^
+day02.mytest04|1664245594356759500|D:\workspace_python\HELLO_PYTHON\day02\mytest04.py
+day02.mytest05|1664246506005342900|D:\workspace_python\HELLO_PYTHON\day02\mytest05.py
+day01.if02|1664239183236369200|D:\workspace_python\HELLO_PYTHON\day01\if02.py
+day02.mytest02|1664241627712070400|D:\workspace_python\HELLO_PYTHON\day02\mytest02.py
+day01.if03|1664239183240358100|D:\workspace_python\HELLO_PYTHON\day01\if03.py
+day02.mytest03|1664244238851226700|D:\workspace_python\HELLO_PYTHON\day02\mytest03.py
+-- END DISKCACHE
+-- START DICTIONARY
+36
+24=day01.if01
+3=D:\workspace_python\HELLO_PYTHON\day01\test01.py
+4=day01.test01
+17=D:\workspace_python\HELLO_PYTHON\day01\if02.py
+22=day01.arr01
+35=D:\workspace_python\HELLO_PYTHON\day02\mydef03.py
+27=D:\workspace_python\HELLO_PYTHON\day02\mydef01.py
+25=D:\workspace_python\HELLO_PYTHON\day02\mytest01.py
+29=D:\workspace_python\HELLO_PYTHON\day02\mydef05.py
+13=D:\workspace_python\HELLO_PYTHON\day02\mytest03.py
+18=day01.if02
+5=D:\workspace_python\HELLO_PYTHON\day01\for01.py
+9=D:\workspace_python\HELLO_PYTHON\day02\mytest05.py
+12=day01.if03
+8=day01.var01
+11=D:\workspace_python\HELLO_PYTHON\day01\if03.py
+26=day02.mytest01
+16=day02.myinput
+23=D:\workspace_python\HELLO_PYTHON\day01\if01.py
+6=day01.for01
+15=D:\workspace_python\HELLO_PYTHON\day02\myinput.py
+2=day01.for02
+21=D:\workspace_python\HELLO_PYTHON\day01\arr01.py
+28=day02.mydef01
+32=day02.mydef04
+36=day02.mydef03
+30=day02.mydef05
+33=D:\workspace_python\HELLO_PYTHON\day02\mytest04.py
+31=D:\workspace_python\HELLO_PYTHON\day02\mydef04.py
+34=day02.mytest04
+7=D:\workspace_python\HELLO_PYTHON\day01\var01.py
+10=day02.mytest05
+19=D:\workspace_python\HELLO_PYTHON\day02\mytest02.py
+20=day02.mytest02
+1=D:\workspace_python\HELLO_PYTHON\day01\for02.py
+14=day02.mytest03
+-- END DICTIONARY
+-- START TREE 1
+23
+a|13|a!1^1#1*19@a!3^2#1*35@a!5^1#1*51@a!7^1#1*67@a!9^6#1*83@a!11^1#1*99@a!13^16#5*115@a!15^1#1*131@a!17^1#1*147@a!19^5#1*163@a!21^1#1*179@a!23^1#1*195@a!25^5#1*211@
+aa|3|aa!9^10#1*83@aa!25^8#1*211@aa!19^7#1*163@
+add|2|add!27^1#5*226@addminmuldiv!29^2#5*242@
+arr|2|arr6!31^22#1*259@arr45!13^10#1*115@
+b|4|b!25^6#1*211@b!13^17#5*115@b!9^7#1*83@b!7^2#1*67@
+bb|2|bb!9^11#1*83@bb!25^9#1*211@
+c|2|c!7^3#1*67@c!9^8#1*83@
+cc|1|cc!9^12#1*83@
+com|1|com!33^8#1*275@
+d|1|d!7^4#1*67@
+dan|0|
+div|2|div!27^16#1*227@divide!27^10#5*226@
+e|1|e!7^5#1*67@
+get|1|getLotto!31^3#5*258@
+lis|0|
+min|2|minus!27^4#5*226@min!27^14#1*227@
+mul|2|multiply!27^7#5*226@mul!27^15#1*227@
+pla|1|player!33^7#1*275@
+ran|0|
+res|1|result!33^9#1*275@
+rnd|2|rnd!13^15#5*115@rnd!33^11#1*275@
+sho|1|showDan!35^1#5*290@
+sum|5|sum!9^14#1*83@sum!27^13#1*227@sum!3^3#1*35@sum!25^11#1*211@sum!29^5#1*243@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

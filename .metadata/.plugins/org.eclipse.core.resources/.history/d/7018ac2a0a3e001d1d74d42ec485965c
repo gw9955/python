@@ -1,0 +1,13 @@
+# 홀/짝을 입력하시오 
+# 나:홀
+# 컴:홀
+# 결과:승리
+
+player = input("나")
+
+if com > 0.5:
+    print("홀")
+elif com < 0.5:
+    print("짝")
+
+com = input("컴")

@@ -1,0 +1,3 @@
+def showDan(dan):
+    print("{}*{}={}".format(dan,1,1*dan))
+    

@@ -1,0 +1,14 @@
+# 홀/짝을 입력하시오 
+# 나:홀
+# 컴:홀
+# 결과:승리
+
+player = input("나")
+com = [0.5]
+
+for i in range(100):
+    rnd = int(random() * len(arr45))
+    a = arr45[0]
+    b = arr45[rnd]
+    arr45[0] = b
+    arr45[rnd] = a

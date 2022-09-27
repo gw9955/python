@@ -1,0 +1,4 @@
+def multiply(a, b):
+    for i in range(1, 10):
+        return a * b
+    print("{}*{}={}".format(aa, i, aa * i))

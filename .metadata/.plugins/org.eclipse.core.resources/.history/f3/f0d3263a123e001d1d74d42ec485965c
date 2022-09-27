@@ -1,0 +1,5 @@
+def multiply(a, b):
+    b
+    for i in range(1, 10):
+        return a * b
+
