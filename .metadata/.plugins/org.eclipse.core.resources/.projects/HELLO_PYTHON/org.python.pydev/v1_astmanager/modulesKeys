@@ -1,4 +1,5 @@
 MODULES_MANAGER_V3
+day01.__init__|D:\workspace_python\HELLO_PYTHON\day01|^
 day01.arr01|D:\workspace_python\HELLO_PYTHON\day01\arr01.py
 day01.for01|D:\workspace_python\HELLO_PYTHON\day01\for01.py
 day01.for02|D:\workspace_python\HELLO_PYTHON\day01\for02.py
@@ -7,6 +8,7 @@ day01.if02|D:\workspace_python\HELLO_PYTHON\day01\if02.py
 day01.if03|D:\workspace_python\HELLO_PYTHON\day01\if03.py
 day01.test01|D:\workspace_python\HELLO_PYTHON\day01\test01.py
 day01.var01|D:\workspace_python\HELLO_PYTHON\day01\var01.py
+day02.__init__|D:\workspace_python\HELLO_PYTHON\day02|^
 day02.mydef01|D:\workspace_python\HELLO_PYTHON\day02\mydef01.py
 day02.mydef02|D:\workspace_python\HELLO_PYTHON\day02\mydef02.py
 day02.mydef03|D:\workspace_python\HELLO_PYTHON\day02\mydef03.py
@@ -18,3 +20,10 @@ day02.mytest02|D:\workspace_python\HELLO_PYTHON\day02\mytest02.py
 day02.mytest03|D:\workspace_python\HELLO_PYTHON\day02\mytest03.py
 day02.mytest04|D:\workspace_python\HELLO_PYTHON\day02\mytest04.py
 day02.mytest05|D:\workspace_python\HELLO_PYTHON\day02\mytest05.py
+day03.__init__|D:\workspace_python\HELLO_PYTHON\day03|^
+day03.ooptest01|D:\workspace_python\HELLO_PYTHON\day03\ooptest01.py
+day03.ooptest02|D:\workspace_python\HELLO_PYTHON\day03\ooptest02.py
+day03.ooptest03|D:\workspace_python\HELLO_PYTHON\day03\ooptest03.py
+day03.opptest04|D:\workspace_python\HELLO_PYTHON\day03\opptest04.py
+day05.__init__|D:\workspace_python\HELLO_PYTHON\day05|^
+day05.pyqt01|D:\workspace_python\HELLO_PYTHON\day05\pyqt01.py
