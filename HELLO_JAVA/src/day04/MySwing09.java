@@ -55,7 +55,8 @@ public class MySwing09 extends JFrame {
 		btn1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(1);
+//				myclick(e);
+//				myclick(1);
 			}
 		});
 		btn1.setBounds(76, 59, 49, 36);
@@ -65,7 +66,8 @@ public class MySwing09 extends JFrame {
 		btn2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(2);
+//				myclick(e);
+//				myclick(2);
 			}
 		});
 		btn2.setBounds(137, 59, 49, 36);
@@ -75,7 +77,8 @@ public class MySwing09 extends JFrame {
 		btn3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(3);
+//				myclick(e);
+//				myclick(3);
 			}
 		});
 		btn3.setBounds(198, 59, 49, 36);
@@ -85,7 +88,8 @@ public class MySwing09 extends JFrame {
 		btn4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(4);
+//				myclick(e);
+//				myclick(4);
 			}
 		});
 		btn4.setBounds(76, 105, 49, 34);
@@ -95,7 +99,8 @@ public class MySwing09 extends JFrame {
 		btn5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(5);
+//				myclick(e);
+//				myclick(5);
 			}
 		});
 		btn5.setBounds(137, 105, 49, 34);
@@ -104,8 +109,9 @@ public class MySwing09 extends JFrame {
 		JButton btn6 = new JButton("6");
 		btn6.addMouseListener(new MouseAdapter() {
 			@Override
-			public void mouseClicked(MouseEvent e) {
-				myclick(6);
+			public void mouseClicked(MouseEvent  e) {
+//				myclick(e);
+//				myclick(6);
 			}
 		});
 		btn6.setBounds(198, 105, 49, 34);
@@ -115,7 +121,8 @@ public class MySwing09 extends JFrame {
 		btn7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(7);
+//				myclick(e);
+//				myclick(7);
 			}
 		});
 		btn7.setBounds(76, 149, 49, 34);
@@ -125,7 +132,8 @@ public class MySwing09 extends JFrame {
 		btn8.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(8);
+//				myclick(e);
+//				myclick(8);
 			}
 		});
 		btn8.setBounds(137, 149, 49, 34);
@@ -135,17 +143,19 @@ public class MySwing09 extends JFrame {
 		btn9.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(9);
+//				myclick(e);
+//				myclick(9);
 			}
 		});
 		btn9.setBounds(198, 149, 49, 34);
 		contentPane.add(btn9);
 
 		JButton btn0 = new JButton("0");
-		btn0.addMouseListener(new MouseAdapter() {
+		btn0.addMouseListener(new MouseAdapter() { 
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				myclick(0);
+//				myclick(e);
+//				myclick(0);
 			}
 		});
 		btn0.setBounds(76, 193, 49, 34);
@@ -155,18 +165,36 @@ public class MySwing09 extends JFrame {
 		btnCall.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				JOptionPane.showMessageDialog(null, tf.getText() + "로 전화중입니다.");
+				JOptionPane.showMessageDialog(null, tf.getText() + "\n 전화연결중입니다.");
 			}
 		});
 		btnCall.setBounds(136, 193, 111, 34);
 		contentPane.add(btnCall);
+		
+		// 이곳에 생성했으니 위에 클릭 이벤트는 지워줘야 두번 안찍힌다.
+		btn1.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn2.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn3.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn4.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn5.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn6.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn7.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn8.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn9.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		btn0.addMouseListener(new MouseAdapter() { public void mouseClicked(MouseEvent e) { myclick(e);}});
+		
 	}
 
-	String str = "";
+//	String str = "";
 
-	public void myclick(int num) {
-		str += String.valueOf(num);
-		tf.setText(str);
+	public void myclick(MouseEvent e) {
+		JButton b = (JButton) e.getSource();
+		String str_new = b.getText();
+		String str_old = tf.getText();
+		tf.setText(str_old+str_new);
+		
+//		str += String.valueOf(num);
+//		tf.setText(str);
 	}
 
 }

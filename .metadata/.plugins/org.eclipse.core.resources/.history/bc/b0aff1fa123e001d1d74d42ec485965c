@@ -1,9 +1,0 @@
-def multiply(a, b):
-    b
-    for i in range(2, 10):
-        return a * b
-
-
-mul = multiply(2)
-
-print("{}*{}={}".format(2, 1, 2 * 1))

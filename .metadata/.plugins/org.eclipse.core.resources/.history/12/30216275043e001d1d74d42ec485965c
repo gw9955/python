@@ -1,9 +1,0 @@
-# 로또 생성하시오
-from random import random
-
-a = list(range(1, 46))
-ran = random(a)
-print(ran)
-
-for i in a:
-    print(i)

@@ -1,7 +1,0 @@
-# 로또 생성하시오
-
-a = (list(range(1, 46)))
-
-for i in a:
-    print(i)
-    

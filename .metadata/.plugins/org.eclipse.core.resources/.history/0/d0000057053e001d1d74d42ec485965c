@@ -1,5 +1,0 @@
-# 로또 생성하시오
-from random import random
-
-ran = random(45)
-print(ran)

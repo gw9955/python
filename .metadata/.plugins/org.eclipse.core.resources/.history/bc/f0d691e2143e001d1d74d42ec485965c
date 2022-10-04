@@ -1,6 +1,0 @@
-def getLotto():
-    
-    return arr6:
-
-arr6 = getLotto()
-print(arr6)
