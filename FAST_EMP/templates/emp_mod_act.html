@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+   EMP_MOD_ACT
+   {% if row == 1 %}
+   <script type="text/javascript">
+      alert("정상적으로 수정되었습니다");
+      location.href="emp_list";
+   </script>
+   {% else %}
+   <script type="text/javascript">
+      alert("오류가 발생했습니다.");
+      history.back();
+   </script>
+   {% endif %}
+</body>
+</html>
