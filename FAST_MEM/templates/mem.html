@@ -1,0 +1,193 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+<title>AJAX</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function () {
+	   fn_list();
+   });
+   
+   function fn_list() {
+	   $.ajax({
+           url: "mem_selects",
+           type: "get",
+           dataType: "json",
+           contentType: "application/json",
+           success: function(data) {
+               var mems = data;
+               
+               var txt = "";
+               
+               for(var i=0; i<mems.length; i++) {
+                  var mem = mems[i];
+                  txt +=  `
+                     <tr>
+                     <td><a href="javascript:fn_one('${mem.m_seq}')">${mem.m_seq}</a></td>
+                     <td>${mem.m_name}</td>
+                     <td>${mem.tel}</td>
+                     <td>${mem.army_yn}</td>
+                  </tr>               
+                          `;
+               }
+               $("#mytbody").html(txt);
+           }
+       });
+   }
+   
+   function fn_one(m_seq) {
+      var params = JSON.stringify({
+            'm_seq': m_seq
+      });
+      $.ajax({
+            url: "mem_select",
+            type: "post",
+            data: params,
+            dataType: "json",
+            contentType: "application/json",
+            success: function(data) {
+               var mem = data;
+                $("#m_seq").val(mem.m_seq);
+                $("#m_name").val(mem.m_name);
+                $("#tel").val(mem.tel);
+                $("#army_yn").val(mem.army_yn);
+            }
+      });
+   }
+   
+   function fn_insert() {
+	 var params = JSON.stringify({
+           'm_name': $("#m_name").val(),
+           'tel': $("#tel").val(),
+           'army_yn': $("#army_yn").val(),
+     });
+     $.ajax({
+           url: "mem_insert",
+           type: "post",
+           data: params,
+           dataType: "json",
+           contentType: "application/json",
+           success: function(data) {
+             	console.log(data);
+             	var cnt = data;
+             	if(cnt == 1) {
+             		fn_list();
+             		$("#m_name").val("");
+             		$("#tel").val("");
+             		$("#army_yn").val("");
+             	} else {
+             		alert("실패!");
+             	}
+           }
+     });
+   }
+   
+   function fn_update() {
+	 var params = JSON.stringify({
+           'm_seq': $("#m_seq").val(),
+           'm_name': $("#m_name").val(),
+           'tel': $("#tel").val(),
+           'army_yn': $("#army_yn").val(),
+     });
+     $.ajax({
+           url: "mem_update",
+           type: "post",
+           data: params,
+           dataType: "json",
+           contentType: "application/json",
+           success: function(data) {
+             	console.log(data);
+             	var cnt = data;
+             	if(cnt == 1) {
+             		fn_list();
+             		$("#m_seq").val("");
+             		$("#m_name").val("");
+             		$("#tel").val("");
+             		$("#army_yn").val("");
+             	} else {
+             		alert("실패!");
+             	}
+           }
+     });
+   }
+   
+   function fn_delete() {
+	 var params = JSON.stringify({
+           'm_seq': $("#m_seq").val(),
+     });
+     $.ajax({
+           url: "mem_delete",
+           type: "post",
+           data: params,
+           dataType: "json",
+           contentType: "application/json",
+           success: function(data) {
+             	console.log(data);
+             	var cnt = data;
+             	if(cnt == 1) {
+             		fn_list();
+             		$("#m_seq").val("");
+             	} else {
+             		alert("실패!");
+             	}
+           }
+     });
+   }
+</script>
+</head> 
+<body> 
+   <table border=1>
+      <thead>
+         <tr>
+            <th>사번</th>
+            <th>이름</th>
+            <th>성별</th>
+            <th>주소</th>
+         </tr>
+      </thead>
+      <tbody id="mytbody">
+         <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+         </tr>
+      </tbody>
+   </table>
+   
+   <table border=1>
+      <tr>
+         <th>사번</th>
+         <td>
+            <input type="text" id="m_seq">
+         </td>
+      </tr>
+      <tr>
+         <th>이름</th>
+         <td>
+            <input type="text" id="m_name">
+         </td>
+      </tr>
+      <tr>
+         <th>전화</th>
+         <td>
+            <input type="text" id="tel">
+         </td>
+      </tr>
+      <tr>
+         <th>군필</th>
+         <td>
+            <input type="text" id="army_yn">
+         </td>
+      </tr>
+      <tr>
+         <td colspan=2>
+            <input type="button" value="추가" onclick="fn_insert()">
+            <input type="button" value="수정" onclick="fn_update()">
+            <input type="button" value="삭제" onclick="fn_delete()">
+         </td>
+      </tr>
+   </table>
+</body> 
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>AJAX</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+var img2D = [
+	[1,1,2,2],
+	[3,3,4,4],
+	[5,5,6,6],
+	[7,7,8,8]
+];
+
+var cvr2D = [
+	[1,1,1,1],
+	[1,1,1,1],
+	[1,1,1,1],
+	[1,1,1,1]
+];
+
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+}
+shuffle(img2D);
+
+function render() {
+	var cnt = 0;
+    for(var i=0; i<=3; i++) {
+       for(var j=0; j<=3; j++) {
+          if(cvr2D[i][j] != 1) {
+             cnt++;
+             continue;
+          }
+          $("img").eq(cnt).attr("src", "static/img/" + img2D[i][j] + ".png");                     
+          cnt++;
+       }
+    }
+}
+</script>
+</head>
+<body onload="shuffle()">
+	<table>
+		<tr>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+		</tr>
+		<tr>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+		</tr>
+		<tr>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+		</tr>
+		<tr>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+			<td><img src="static/img/0.png"></td>
+		</tr>
+	</table>
+	<a href="javascript:render()">render</a>
+</body>
+</html>

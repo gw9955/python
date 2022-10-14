@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<style type="text/css">
+.myit {
+	width: 20px;
+}
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#btn_plus").bind("click", function() {
+			$("#it3").val(parseInt($("#it1").val()) + parseInt($("#it2").val()));
+		});
+		$("#btn_minus").bind("click", function() {
+			$("#it3").val(parseInt($("#it1").val()) - parseInt($("#it2").val()));
+		});
+		$("#btn_multiply").bind("click", function() {
+			$("#it3").val(parseInt($("#it1").val()) * parseInt($("#it2").val()));
+		});
+		$("#btn_divide").bind("click", function() {
+			$("#it3").val(parseInt($("#it1").val()) / parseInt($("#it2").val()));
+		});
+	});
+</script>
+</head>
+<body>
+	<table border=1>
+		<tr>
+			<td><input type="text" class="myit" id="it1"></td>
+			<td>
+				<input type="button" id="btn_plus" value="plus"><br>
+				<input type="button" id="btn_minus" value="minus"><br>
+				<input type="button" id="btn_multiply" value="multiply"><br>
+				<input type="button" id="btn_divide" value="divide"><br>
+			</td>
+			<td>
+				<input type="text" class="myit" id="it2">
+			</td>
+			<td>=</td>
+			<td>
+				<input type="text" class="myit" id="it3">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
