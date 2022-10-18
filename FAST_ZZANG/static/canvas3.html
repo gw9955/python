@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas</title>
+<script src="static/js/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+var cvr2D = [
+	[ 1, 0, 1, 0 ], 
+	[ 1, 1, 1, 0 ], 
+	[ 0, 0, 0, 1 ],
+	[ 1, 1, 0, 0 ] 
+	];
+
+	function myinit() {
+		var c = document.getElementById("mycan");
+		var ctx = c.getContext("2d");
+		for (var i = 0; i < 4; i++) {
+			for (var j = 0; j < 4; j++) {
+				if (cvr2D[i][j] == 0) {
+					ctx.fillStyle = "#000000";
+				} else {
+					ctx.fillStyle = "#FFff00";
+				}
+
+				ctx.fillRect(j * 10, i * 10, 9, 9);
+			}
+		}
+
+	}
+</script>
+</head>
+<body onload="myinit()">
+	<canvas id="mycan" width="400px" height="400px">
+		
+	</canvas>
+</body>
+</html>

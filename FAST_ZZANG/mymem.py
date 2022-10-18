@@ -15,6 +15,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 def zzang(request: Request):
     return templates.TemplateResponse("zzang.html", {"request": request}) 
 
+@app.get('/zzang2', response_class=HTMLResponse) 
+def zzang2(request: Request):
+    return templates.TemplateResponse("zzang2.html", {"request": request}) 
+
 
 
 # uvicorn mymem:app --reload

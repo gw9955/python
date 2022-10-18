@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas</title>
+<script src="static/js/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+	function myinit() {
+		var c = document.getElementById("mycan");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = "#FFff00";
+		ctx.fillRect(20, 20, 150, 100);
+	}
+</script>
+</head>
+<body onload="myinit()">
+	<canvas id="mycan" width="400px" height="400px">
+		
+	</canvas>
+</body>
+</html>

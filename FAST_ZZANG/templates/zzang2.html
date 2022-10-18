@@ -150,15 +150,17 @@
 		}
 	}
 
+
 	function patchIJEvent() {
+		var image = document.querySelectorAll("img");
 		for (var i = 0; i < 4; i++) {
 			for (var j = 0; j < 4; j++) {
-				$("img").eq(i * 4 + j).attr("alt", i + "," + j);
+				image[i * 4 + j].alt = i + "," + j;
+				image[i * 4 + j].addEventListener("click", function(event) {
+					myclick(event);
+				});
 			}
 		}
-		$("img").bind("click", function(event) {
-			myclick(event);
-		});
 	}
 
 	function shuffle() {
@@ -178,10 +180,10 @@
 		}
 	}
 	function render() {
+		var image = document.querySelectorAll("img");
 		for (var i = 0; i < 4; i++) {
 			for (var j = 0; j < 4; j++) {
-				$("img").eq(i * 4 + j).attr("src",
-						"static/img/" + dsp2D[i][j] + ".png");
+				image[i * 4 + j].src = "static/img/" + dsp2D[i][j] + ".png";
 			}
 		}
 		//       var cnt = 0;
@@ -198,7 +200,8 @@
 	}
 
 	function disp() {
-		$("#mydisp").html(parseInt($("#mydisp").html()) - 2)
+		var disp = document.querySelector("#mydisp");
+		disp.innerHTML = parseInt(disp.innerHTML) -2;
 	}
 </script>
 </head>
