@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="sp"/>
+		<item key="selection" value="set"/>
 		<list key="findhistory">
+			<item value="set"/>
+			<item value="cnt_final"/>
+			<item value="cnt_)final"/>
+			<item value="192"/>
 			<item value="sp"/>
 			<item value="$"/>
 			<item value="emp"/>

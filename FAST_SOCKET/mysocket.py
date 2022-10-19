@@ -1,57 +1,14 @@
 from typing import List
 
-from fastapi import FastAPI, Request, Form
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Request, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles 
-from fastapi.templating import Jinja2Templates 
-from pydantic import BaseModel
-from starlette.responses import JSONResponse
-
+from starlette.templating import Jinja2Templates
+from starlette.staticfiles import StaticFiles
 
 app = FastAPI()
 
 templates = Jinja2Templates(directory="templates") 
 app.mount("/static", StaticFiles(directory="static"), name="static") 
-
-html = """
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Chat</title>
-    </head>
-    <body>
-        <h1>WebSocket Chat</h1>
-        <h2>Your ID: <span id="ws-id"></span></h2>
-        <form action="" onsubmit="sendMessage(event)">
-            <input type="text" id="messageText" autocomplete="off"/>
-            <button>Send</button>
-        </form>
-        <ul id='messages'>
-        </ul>
-        <script>
-            var client_id = Date.now()
-            document.querySelector("#ws-id").textContent = client_id;
-            var ws = new WebSocket(`ws://localhost:8000/ws/${client_id}`);
-            ws.onmessage = function(event) {
-                var messages = document.getElementById('messages')
-                var message = document.createElement('li')
-                var content = document.createTextNode(event.data)
-                message.appendChild(content)
-                messages.appendChild(message)
-            };
-            function sendMessage(event) {
-                var input = document.getElementById("messageText")
-                ws.send(input.value)
-                input.value = ''
-                event.preventDefault()
-            }
-        </script>
-    </body>
-</html>
-"""
-
 
 class ConnectionManager:
     def __init__(self):
@@ -74,14 +31,14 @@ class ConnectionManager:
 
 manager = ConnectionManager()
 
+
 @app.get('/', response_class=HTMLResponse) 
 def root(request: Request):
     return templates.TemplateResponse("socket.html", {"request": request}) 
 
-@app.get("/")
-async def get():
-    return HTMLResponse(html)
-
+@app.get('/card', response_class=HTMLResponse) 
+def card(request: Request):
+    return templates.TemplateResponse("card.html", {"request": request}) 
 
 @app.websocket("/ws/{client_id}")
 async def websocket_endpoint(websocket: WebSocket, client_id: int):
@@ -89,10 +46,12 @@ async def websocket_endpoint(websocket: WebSocket, client_id: int):
     try:
         while True:
             data = await websocket.receive_text()
-            await manager.send_personal_message(f"You wrote: {data}", websocket)
-            await manager.broadcast(f"Client #{client_id} says: {data}")
+            print("data", data)
+            # await manager.send_personal_message(f"You wrote: {data}", websocket)
+            await manager.broadcast(f"{data}")
     except WebSocketDisconnect:
+        print("error");
         manager.disconnect(websocket)
-        await manager.broadcast(f"Client #{client_id} left the chat")
+        await manager.broadcast(f"error")
         
-# uvicorn mysocket:app --reload
+# uvicorn mysocket:app --reload --host=192.168.142.21
